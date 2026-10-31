@@ -1,0 +1,136 @@
+{
+  "Name": "UNO Overlays",
+  "Description": "동적 양식과 스포츠 점수로 UNO 오버레이를 제어",
+  "dev.br.consciencia.opendeck.uno-overlays.showall": {
+    "Name": "모두 표시",
+    "Tooltip": "모든 오버레이를 표시합니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.hideall": {
+    "Name": "모두 숨기기",
+    "Tooltip": "모든 오버레이를 숨깁니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.toggle": {
+    "Name": "오버레이",
+    "Tooltip": "동적 내용이 있는 오버레이를 전환합니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.numericfields": {
+    "Name": "숫자 필드",
+    "Tooltip": "전역 배수로 숫자 필드를 늘리거나 줄입니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.multiplier": {
+    "Name": "배수",
+    "Tooltip": "숫자 필드 작업의 전역 배수를 설정합니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.knob": {
+    "Name": "노브 제어",
+    "Tooltip": "독립된 동작 세 가지: 반시계 방향, 누르기, 시계 방향"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.display": {
+    "Name": "값 표시",
+    "Tooltip": "숫자 필드의 값을 표시합니다 (불러올 때와 선택을 바꿀 때 갱신)"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.nextslot": {
+    "Name": "다음 슬롯",
+    "Tooltip": "다음 서버 슬롯을 불러와 오버레이를 표시합니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.prevslot": {
+    "Name": "이전 슬롯",
+    "Tooltip": "이전 서버 슬롯을 불러와 오버레이를 표시합니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.slotwheel": {
+    "Name": "슬롯 휠",
+    "Tooltip": "돌려서 슬롯을 고르고, 클릭하면 불러옴 (Action Wheel)"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.reveal": {
+    "Name": "정답 공개",
+    "Tooltip": "퀴즈 오버레이의 정답을 공개하거나 숨기고, 정답 선택지를 강조합니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.dialvalue": {
+    "Name": "노브로 값 설정",
+    "Tooltip": "클릭하면 편집, 돌려서 선택, 클릭하면 전송, 2초 누르면 취소"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.visor": {
+    "Name": "뷰어",
+    "Tooltip": "노브의 슬롯이나 값을 표시합니다. 누르기 = 노브 누르기"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.timer": {
+    "Name": "타이머",
+    "Tooltip": "타이머 필드를 재생, 일시 정지, 초기화, 시작합니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.obsscene": {
+    "Name": "OBS 장면",
+    "Tooltip": "OBS 프로그램 장면을 바꾸고, 원하면 오버레이를 표시합니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.obsrefresh": {
+    "Name": "OBS 브라우저 새로 고침",
+    "Tooltip": "OBS 브라우저 소스를 캐시 없이 다시 불러옵니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.macro": {
+    "Name": "매크로",
+    "Tooltip": "Wait 단계를 포함해 단계를 순서대로 실행합니다 (Companion 방식). 실행 중 빨간색"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.panic": {
+    "Name": "패닉",
+    "Tooltip": "모든 실행과 타이머를 중단한 뒤 모든 오버레이를 숨깁니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.restore": {
+    "Name": "복원",
+    "Tooltip": "패닉이 내린 것을 다시 표시합니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.snapshot": {
+    "Name": "장면",
+    "Tooltip": "모든 오버레이의 표시 상태, 슬롯, 내용을 저장하거나 불러옵니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.shift": {
+    "Name": "Shift",
+    "Tooltip": "누르고 있는 동안: 노브는 Shift용 오버레이나 필드를 씁니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.clock": {
+    "Name": "시계",
+    "Tooltip": "카운트다운, 카운트업, 현재 시각 또는 특정 시각까지의 카운트를 텍스트 필드에 씁니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.undo": {
+    "Name": "되돌리기",
+    "Tooltip": "마지막 점수 변경을 되돌립니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.lock": {
+    "Name": "잠금",
+    "Tooltip": "점수 변경을 잠그거나 풉니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.swap": {
+    "Name": "진영 교체",
+    "Tooltip": "필드 쌍의 값을 맞바꿉니다 (A팀과 B팀)"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.cycle": {
+    "Name": "순환",
+    "Tooltip": "필드를 값 목록에 따라 넘깁니다 (피리어드, 공격권)"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.reset": {
+    "Name": "초기화",
+    "Tooltip": "2초 누르면 고른 필드를 초기화"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.datasource": {
+    "Name": "데이터 소스",
+    "Tooltip": "목록, .txt, .csv의 행을 오버레이 필드로: 다음, 이전, 선택, Auto Next"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.template": {
+    "Name": "텍스트 템플릿",
+    "Tooltip": "여러 필드로 만든 텍스트를 씁니다. 예: {Name} – {Role}"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.vote": {
+    "Name": "투표하기",
+    "Tooltip": "투표 선택지에 한 표를 더합니다. 합계와 비율이 따라 바뀝니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.goal": {
+    "Name": "목표",
+    "Tooltip": "Streamlabs 같은 목표: 시작, 금액 더하기, 종료. 비율이 따라 바뀝니다"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.status": {
+    "Name": "상태",
+    "Tooltip": "연결 상태 한눈에 보기 (Companion 색상) 및 오늘의 UNO API 호출 수. 누르면 테스트"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.lockdesk": {
+    "Name": "데스크 잠금",
+    "Tooltip": "UNO Overlays의 모든 키와 노브를 잠급니다. 2초 누르면 풀림"
+  }
+}

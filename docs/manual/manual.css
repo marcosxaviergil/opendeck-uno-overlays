@@ -1,0 +1,37 @@
+/* Manual.pdf (scripts/build_manual.py, WeasyPrint). A4, page numbers, contents with page numbers,
+   bookmarks from the headings (h1 language, h2 chapter, h3 section, h4 action). */
+@page { size: A4; margin: 20mm 18mm 22mm; @bottom-center { content: counter(page); font-size: 9pt; color: #555; } }
+@page :first { @bottom-center { content: none; } }
+html { font-family: "DejaVu Sans", "Noto Sans", sans-serif; font-size: 10.5pt; line-height: 1.45; color: #111; }
+:lang(ja) { font-family: "Noto Sans CJK JP", "DejaVu Sans", sans-serif; }
+:lang(zh-CN) { font-family: "Noto Sans CJK SC", "DejaVu Sans", sans-serif; }
+:lang(ko) { font-family: "Noto Sans CJK KR", "DejaVu Sans", sans-serif; }
+h1, h2, h3, h4 { line-height: 1.25; break-after: avoid; }
+h1 { font-size: 22pt; margin: 0 0 6mm; bookmark-level: 1; }
+h2 { font-size: 15pt; margin: 8mm 0 3mm; border-bottom: 1px solid #999; bookmark-level: 2; }
+h3 { font-size: 12.5pt; margin: 6mm 0 2mm; bookmark-level: 3; }
+h4 { font-size: 11pt; margin: 5mm 0 1.5mm; bookmark-level: 4; }
+h2.toc-title { bookmark-level: none; border: 0; }
+section.language { break-before: page; }
+nav.toc { break-after: page; }
+nav.toc ul { list-style: none; padding: 0; margin: 0; }
+nav.toc li { margin: 1mm 0; }
+nav.toc li.level3 { margin-left: 6mm; }
+nav.toc li.level4 { margin-left: 12mm; font-size: 9.5pt; }
+nav.toc a { color: #111; text-decoration: none; }
+nav.toc a::after { content: leader('.') target-counter(attr(href), page); }
+.cover { text-align: center; padding-top: 50mm; }
+.cover .product { font-size: 30pt; font-weight: bold; margin: 0; }
+.cover .kind { font-size: 18pt; margin: 4mm 0 16mm; color: #333; }
+.cover ul.languages { list-style: none; padding: 0; font-size: 14pt; line-height: 2; }
+.cover a { color: #0645ad; }
+a { color: #0645ad; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9.5pt; background: #f1f1f1; padding: 0 2px; }
+dl.fields { margin: 0 0 3mm; }
+dl.fields dt { font-weight: bold; margin-top: 2mm; }
+dl.fields dd { margin: 0.5mm 0 0 5mm; }
+figure { margin: 4mm 0; break-inside: avoid; text-align: center; }
+figure img { max-width: 100%; max-height: 110mm; }
+figcaption { font-size: 9pt; color: #444; margin-top: 1.5mm; }
+.placeholder { box-sizing: border-box; width: 100%; height: 70mm; line-height: 66mm; border: 2px dashed #888;
+  background: #f4f4f4; text-align: center; font-family: "DejaVu Sans Mono", monospace; font-size: 12pt; color: #333; }

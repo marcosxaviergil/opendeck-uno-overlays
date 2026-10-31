@@ -1,0 +1,136 @@
+{
+  "Name": "UNO Overlays",
+  "Description": "Control de overlays de UNO con formularios dinámicos y marcadores deportivos",
+  "dev.br.consciencia.opendeck.uno-overlays.showall": {
+    "Name": "Mostrar todos",
+    "Tooltip": "Muestra todos los overlays"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.hideall": {
+    "Name": "Ocultar todos",
+    "Tooltip": "Oculta todos los overlays"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.toggle": {
+    "Name": "Overlay",
+    "Tooltip": "Alterna un overlay con contenido dinámico"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.numericfields": {
+    "Name": "Campos numéricos",
+    "Tooltip": "Incrementa o decrementa un campo numérico con el multiplicador global"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.multiplier": {
+    "Name": "Multiplicador",
+    "Tooltip": "Fija el multiplicador global de las operaciones con campos numéricos"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.knob": {
+    "Name": "Control por knob",
+    "Tooltip": "Tres acciones independientes: antihorario, pulsar, horario"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.display": {
+    "Name": "Visor de valor",
+    "Tooltip": "Muestra el valor de un campo numérico (se actualiza al cargar y al cambiar la selección)"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.nextslot": {
+    "Name": "Slot siguiente",
+    "Tooltip": "Toma el siguiente slot del servidor y muestra el overlay"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.prevslot": {
+    "Name": "Slot anterior",
+    "Tooltip": "Toma el slot anterior del servidor y muestra el overlay"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.slotwheel": {
+    "Name": "Rueda de slots",
+    "Tooltip": "Gira para elegir un slot, pulsa para tomarlo (Action Wheel)"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.reveal": {
+    "Name": "Revelar respuesta",
+    "Tooltip": "Revela u oculta la respuesta de un overlay de concurso, con la opción correcta resaltada"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.dialvalue": {
+    "Name": "Valor en el knob",
+    "Tooltip": "Pulsa para editar, gira para elegir, pulsa para enviar, mantén 2 s para cancelar"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.visor": {
+    "Name": "Visor",
+    "Tooltip": "Muestra el slot o valor de un knob; pulsar = pulsar el knob"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.timer": {
+    "Name": "Temporizador",
+    "Tooltip": "Reproduce, pausa, reinicia o inicia un campo temporizador"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.obsscene": {
+    "Name": "OBS: escena",
+    "Tooltip": "Cambia la escena de programa de OBS y, opcionalmente, muestra un overlay"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.obsrefresh": {
+    "Name": "OBS: actualizar navegador",
+    "Tooltip": "Recarga una fuente de navegador de OBS sin caché"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.macro": {
+    "Name": "Macro",
+    "Tooltip": "Ejecuta pasos en orden, con pasos Wait (estilo Companion). Roja mientras se ejecuta"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.panic": {
+    "Name": "Pánico",
+    "Tooltip": "Cancela todas las ejecuciones y temporizadores y oculta todos los overlays"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.restore": {
+    "Name": "Restaurar",
+    "Tooltip": "Vuelve a mostrar lo que Pánico sacó del aire"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.snapshot": {
+    "Name": "Escena",
+    "Tooltip": "Guarda o recupera visibilidad, slot y contenido de todos los overlays"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.shift": {
+    "Name": "Shift",
+    "Tooltip": "Mantener: los knobs usan el overlay o campo del Shift"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.clock": {
+    "Name": "Reloj",
+    "Tooltip": "Cuenta atrás, ascendente, hora del día o cuenta hasta una hora, escrita en un campo de texto"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.undo": {
+    "Name": "Deshacer",
+    "Tooltip": "Deshace el último cambio de marcador"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.lock": {
+    "Name": "Bloqueo",
+    "Tooltip": "Bloquea o desbloquea los cambios de marcador"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.swap": {
+    "Name": "Cambiar de lado",
+    "Tooltip": "Intercambia los valores de pares de campos (equipo A y B)"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.cycle": {
+    "Name": "Ciclo",
+    "Tooltip": "Avanza un campo por una lista de valores (periodo, posesión)"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.reset": {
+    "Name": "Reiniciar",
+    "Tooltip": "Mantén 2 s para reiniciar los campos elegidos"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.datasource": {
+    "Name": "Fuente de datos",
+    "Tooltip": "Filas de una lista, .txt o .csv en campos del overlay: siguiente, anterior, seleccionar, Auto Next"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.template": {
+    "Name": "Plantilla de texto",
+    "Tooltip": "Escribe un texto creado con varios campos, p. ej. {Name} – {Role}"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.vote": {
+    "Name": "Voto en encuesta",
+    "Tooltip": "Suma un voto a una opción de la encuesta; total y porcentajes se actualizan"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.goal": {
+    "Name": "Meta",
+    "Tooltip": "Meta como en Streamlabs: iniciar, sumar importes, terminar; el porcentaje se actualiza"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.status": {
+    "Name": "Estado",
+    "Tooltip": "Conexiones de un vistazo (colores de Companion) y llamadas de hoy a la API de UNO; pulsa para probar"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.lockdesk": {
+    "Name": "Bloqueo de mesa",
+    "Tooltip": "Bloquea todas las teclas y knobs de UNO Overlays; mantén 2 s para desbloquear"
+  }
+}

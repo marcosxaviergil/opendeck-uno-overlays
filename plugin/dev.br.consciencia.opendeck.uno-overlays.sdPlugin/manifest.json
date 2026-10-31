@@ -1,0 +1,564 @@
+{
+  "Actions": [
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.showall",
+      "Icon": "images/showall",
+      "Name": "Show All",
+      "Tooltip": "Show all overlays",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/showall"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.hideall",
+      "Icon": "images/hideall",
+      "Name": "Hide All",
+      "Tooltip": "Hide all overlays",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/hideall"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.toggle",
+      "Icon": "images/toggle",
+      "Name": "Overlay",
+      "Tooltip": "Toggle overlay with dynamic content",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/toggle"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.numericfields",
+      "Icon": "images/numericfields",
+      "Name": "Numeric Fields",
+      "Tooltip": "Increment or decrement a numeric field using the global multiplier",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/numericfields"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.multiplier",
+      "Icon": "images/multiplier",
+      "Name": "Multiplier",
+      "Tooltip": "Set the global multiplier for numeric field operations",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/multiplier"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.knob",
+      "Icon": "images/knob",
+      "Name": "Knob Control",
+      "Tooltip": "Three independent actions: counter-clockwise, press, clockwise",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/knob"
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.display",
+      "Icon": "images/display",
+      "Name": "Display",
+      "Tooltip": "Displays a numeric field value (updates on load and when you change selection)",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder",
+        "Infobar"
+      ],
+      "States": [
+        {
+          "Image": "images/display",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.nextslot",
+      "Icon": "images/nextslot",
+      "Name": "Next Slot",
+      "Tooltip": "Take the next server slot and show the overlay",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/nextslot"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.prevslot",
+      "Icon": "images/prevslot",
+      "Name": "Previous Slot",
+      "Tooltip": "Take the previous server slot and show the overlay",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/prevslot"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.slotwheel",
+      "Icon": "images/slotwheel",
+      "Name": "Slot Wheel",
+      "Tooltip": "Turn to choose a slot, click to take it (Action Wheel)",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/slotwheel"
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.reveal",
+      "Icon": "images/reveal",
+      "Name": "Reveal Answer",
+      "Tooltip": "Reveal or hide the answer of a quiz overlay, with the correct option highlighted",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/reveal"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.dialvalue",
+      "Icon": "images/dialvalue",
+      "Name": "Dial Value",
+      "Tooltip": "Click to edit, turn to choose, click to send, hold 2 s to cancel",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/dialvalue"
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.visor",
+      "Icon": "images/visor",
+      "Name": "Visor",
+      "Tooltip": "Shows a knob's slot or value; press = knob click",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/visor"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.timer",
+      "Icon": "images/timer",
+      "Name": "Timer",
+      "Tooltip": "Play, pause, reset or start a timer field",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/timer"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.obsscene",
+      "Icon": "images/obsscene",
+      "Name": "OBS Scene",
+      "Tooltip": "Switch the OBS program scene, optionally showing an overlay",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/obsscene"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.obsrefresh",
+      "Icon": "images/obsrefresh",
+      "Name": "OBS Refresh Browser",
+      "Tooltip": "Reload an OBS browser source without cache",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/obsrefresh"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.macro",
+      "Icon": "images/macro",
+      "Name": "Macro",
+      "Tooltip": "Run steps in order, with Wait steps (Companion style). Red while running",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/macro"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.panic",
+      "Icon": "images/panic",
+      "Name": "Panic",
+      "Tooltip": "Abort all runs and timers, then hide all overlays",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/panic"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.restore",
+      "Icon": "images/restore",
+      "Name": "Restore",
+      "Tooltip": "Show again what Panic took off air",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/restore"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.snapshot",
+      "Icon": "images/snapshot",
+      "Name": "Scene",
+      "Tooltip": "Store or recall visibility, slot and content of every overlay",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/snapshot"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.shift",
+      "Icon": "images/shift",
+      "Name": "Shift",
+      "Tooltip": "Hold: knobs use their Shift overlay or field",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/shift"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.clock",
+      "Icon": "images/clock",
+      "Name": "Clock",
+      "Tooltip": "Countdown, count up, time of day or countdown to a time, written in a text field",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/clock"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.undo",
+      "Icon": "images/undo",
+      "Name": "Undo",
+      "Tooltip": "Undo the last score change",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/undo"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.lock",
+      "Icon": "images/lock",
+      "Name": "Lock",
+      "Tooltip": "Lock or unlock score changes",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/lock"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.swap",
+      "Icon": "images/swap",
+      "Name": "Swap Sides",
+      "Tooltip": "Swap the values of field pairs (team A and B)",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/swap"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.cycle",
+      "Icon": "images/cycle",
+      "Name": "Cycle",
+      "Tooltip": "Step a field through a list of values (period, possession)",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/cycle"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.reset",
+      "Icon": "images/reset",
+      "Name": "Reset",
+      "Tooltip": "Hold 2 s to reset the chosen fields",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/reset"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.datasource",
+      "Icon": "images/datasource",
+      "Name": "Data Source",
+      "Tooltip": "Rows from a list, .txt or .csv into overlay fields: next, previous, select, Auto Next",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/datasource"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.template",
+      "Icon": "images/template",
+      "Name": "Text Template",
+      "Tooltip": "Writes a text built from several fields, e.g. {Name} – {Role}",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/template"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.vote",
+      "Icon": "images/vote",
+      "Name": "Poll Vote",
+      "Tooltip": "Adds a vote to a poll option; totals and percentages follow",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/vote"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.goal",
+      "Icon": "images/goal",
+      "Name": "Goal",
+      "Tooltip": "Goal like Streamlabs: start, add amounts, end; percentage follows",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "images/goal"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.status",
+      "Icon": "images/status",
+      "Name": "Status",
+      "Tooltip": "Connections at a glance (Companion colors) and today's UNO API calls; press to test",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/status"
+        }
+      ],
+      "DisableAutomaticStates": true
+    },
+    {
+      "UUID": "dev.br.consciencia.opendeck.uno-overlays.lockdesk",
+      "Icon": "images/lockdesk",
+      "Name": "Lock Desk",
+      "Tooltip": "Locks every UNO Overlays key and knob; hold 2 s to unlock",
+      "PropertyInspectorPath": "pi/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "images/lockdesk"
+        }
+      ],
+      "DisableAutomaticStates": true
+    }
+  ],
+  "Author": "SeTIC UFSC / Marcos Xavier",
+  "Category": "UNO Overlays",
+  "CategoryIcon": "images/plugin",
+  "Description": "UNO Overlay control with dynamic forms and sports scoring",
+  "Name": "UNO Overlays",
+  "Icon": "images/plugin",
+  "PropertyInspectorPath": "pi/index.html",
+  "HasSettingsInterface": true,
+  "Version": "2.0.0",
+  "OS": [
+    {
+      "Platform": "linux"
+    }
+  ],
+  "PluginUUID": "dev.br.consciencia.opendeck.uno-overlays",
+  "CodePathLin": "launch.sh"
+}

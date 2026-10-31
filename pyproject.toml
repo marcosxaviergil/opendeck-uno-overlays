@@ -1,0 +1,24 @@
+# Development tooling only: the plugin itself needs just Python 3.10+ and its vendored files.
+[project]
+name = "opendeck-uno-overlays"
+version = "2.0.0"
+description = "UNO Overlays (overlays.uno / Singular.live) control for OpenDeck on Linux"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+src = ["plugin/dev.br.consciencia.opendeck.uno-overlays.sdPlugin", "tests"]
+extend-exclude = ["plugin/*/vendor", "plugin/*/uno/glyphs.py"]
+
+[tool.ruff.lint]
+# pycodestyle, pyflakes, isort, bugbear, pyupgrade, simplify, bandit (security), blind except, logging
+select = ["E", "W", "F", "I", "B", "UP", "SIM", "S", "BLE", "LOG", "G"]
+
+[tool.ruff.lint.per-file-ignores]
+# Fake tokens, passwords and /tmp paths are test data; tests run git and python on purpose.
+"tests/*" = ["S101", "S105", "S106", "S107", "S108", "S603", "S607"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["uno", "support"]

@@ -1,0 +1,136 @@
+{
+  "Name": "UNO Overlays",
+  "Description": "通过动态表单和体育比分控制 UNO 叠加层",
+  "dev.br.consciencia.opendeck.uno-overlays.showall": {
+    "Name": "全部显示",
+    "Tooltip": "显示所有叠加层"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.hideall": {
+    "Name": "全部隐藏",
+    "Tooltip": "隐藏所有叠加层"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.toggle": {
+    "Name": "叠加层",
+    "Tooltip": "切换带动态内容的叠加层"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.numericfields": {
+    "Name": "数值字段",
+    "Tooltip": "使用全局倍数增减数值字段"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.multiplier": {
+    "Name": "倍数",
+    "Tooltip": "设置数值字段操作的全局倍数"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.knob": {
+    "Name": "旋钮控制",
+    "Tooltip": "三个独立动作：逆时针、按下、顺时针"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.display": {
+    "Name": "数值显示",
+    "Tooltip": "显示数值字段的值（加载时和更改选择时更新）"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.nextslot": {
+    "Name": "下一个槽位",
+    "Tooltip": "调用下一个服务器槽位并显示叠加层"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.prevslot": {
+    "Name": "上一个槽位",
+    "Tooltip": "调用上一个服务器槽位并显示叠加层"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.slotwheel": {
+    "Name": "槽位转盘",
+    "Tooltip": "旋转选择槽位，单击调用（Action Wheel）"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.reveal": {
+    "Name": "揭晓答案",
+    "Tooltip": "揭晓或隐藏问答叠加层的答案，并突出显示正确选项"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.dialvalue": {
+    "Name": "旋钮设值",
+    "Tooltip": "单击编辑，旋转选择，单击发送，按住 2 秒取消"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.visor": {
+    "Name": "面板",
+    "Tooltip": "显示旋钮的槽位或数值；按下 = 按下旋钮"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.timer": {
+    "Name": "计时器",
+    "Tooltip": "播放、暂停、重置或启动计时器字段"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.obsscene": {
+    "Name": "OBS 场景",
+    "Tooltip": "切换 OBS 节目场景，并可选择显示叠加层"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.obsrefresh": {
+    "Name": "OBS 刷新浏览器",
+    "Tooltip": "不使用缓存重新加载 OBS 浏览器源"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.macro": {
+    "Name": "宏",
+    "Tooltip": "按顺序运行步骤，含 Wait 步骤（Companion 风格）。运行时为红色"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.panic": {
+    "Name": "紧急停止",
+    "Tooltip": "中止所有运行和计时器，然后隐藏所有叠加层"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.restore": {
+    "Name": "恢复",
+    "Tooltip": "重新显示紧急停止撤下的内容"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.snapshot": {
+    "Name": "场景",
+    "Tooltip": "保存或调用所有叠加层的可见性、槽位和内容"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.shift": {
+    "Name": "Shift",
+    "Tooltip": "按住：旋钮使用其 Shift 叠加层或字段"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.clock": {
+    "Name": "时钟",
+    "Tooltip": "倒计时、正计时、当前时间或计时到某一时刻，写入文本字段"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.undo": {
+    "Name": "撤销",
+    "Tooltip": "撤销最近一次比分更改"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.lock": {
+    "Name": "锁定",
+    "Tooltip": "锁定或解锁比分更改"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.swap": {
+    "Name": "交换场地",
+    "Tooltip": "交换成对字段的值（A 队和 B 队）"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.cycle": {
+    "Name": "循环",
+    "Tooltip": "让字段在一组取值中依次切换（节次、球权）"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.reset": {
+    "Name": "重置",
+    "Tooltip": "按住 2 秒重置所选字段"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.datasource": {
+    "Name": "数据源",
+    "Tooltip": "将列表、.txt 或 .csv 的行写入叠加层字段：下一行、上一行、选择、Auto Next"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.template": {
+    "Name": "文本模板",
+    "Tooltip": "写入由多个字段组成的文本，例如 {Name} – {Role}"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.vote": {
+    "Name": "投票",
+    "Tooltip": "为投票选项加一票；总数和百分比随之更新"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.goal": {
+    "Name": "目标",
+    "Tooltip": "类似 Streamlabs 的目标：开始、增加金额、结束；百分比随之更新"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.status": {
+    "Name": "状态",
+    "Tooltip": "连接状态一览（Companion 配色）和今天的 UNO API 调用次数；按下进行测试"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.lockdesk": {
+    "Name": "控制台锁定",
+    "Tooltip": "锁定 UNO Overlays 的所有按键和旋钮；按住 2 秒解锁"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "Name": "UNO Overlays",
+  "Description": "動的フォームとスポーツスコアで UNO のオーバーレイを操作",
+  "dev.br.consciencia.opendeck.uno-overlays.showall": {
+    "Name": "すべて表示",
+    "Tooltip": "すべてのオーバーレイを表示します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.hideall": {
+    "Name": "すべて隠す",
+    "Tooltip": "すべてのオーバーレイを隠します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.toggle": {
+    "Name": "オーバーレイ",
+    "Tooltip": "動的な内容を持つオーバーレイを切り替えます"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.numericfields": {
+    "Name": "数値フィールド",
+    "Tooltip": "グローバル倍率で数値フィールドを増減します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.multiplier": {
+    "Name": "倍率",
+    "Tooltip": "数値フィールド操作のグローバル倍率を設定します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.knob": {
+    "Name": "ノブ操作",
+    "Tooltip": "3 つの独立したアクション: 反時計回り、押す、時計回り"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.display": {
+    "Name": "値の表示",
+    "Tooltip": "数値フィールドの値を表示します（読み込み時と選択変更時に更新）"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.nextslot": {
+    "Name": "次のスロット",
+    "Tooltip": "次のサーバースロットを取り込み、オーバーレイを表示します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.prevslot": {
+    "Name": "前のスロット",
+    "Tooltip": "前のサーバースロットを取り込み、オーバーレイを表示します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.slotwheel": {
+    "Name": "スロットホイール",
+    "Tooltip": "回してスロットを選び、クリックで取り込む（Action Wheel）"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.reveal": {
+    "Name": "答えを表示",
+    "Tooltip": "クイズのオーバーレイの答えを表示／非表示にし、正解を強調します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.dialvalue": {
+    "Name": "ノブで値を設定",
+    "Tooltip": "クリックで編集、回して選択、クリックで送信、2 秒長押しで取消"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.visor": {
+    "Name": "バイザー",
+    "Tooltip": "ノブのスロットや値を表示します。押す = ノブを押す"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.timer": {
+    "Name": "タイマー",
+    "Tooltip": "タイマーフィールドを再生、一時停止、リセット、開始します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.obsscene": {
+    "Name": "OBS シーン",
+    "Tooltip": "OBS のプログラムシーンを切り替え、必要ならオーバーレイを表示します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.obsrefresh": {
+    "Name": "OBS ブラウザ更新",
+    "Tooltip": "OBS のブラウザソースをキャッシュなしで再読み込みします"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.macro": {
+    "Name": "マクロ",
+    "Tooltip": "Wait ステップ付きでステップを順に実行します（Companion 風）。実行中は赤"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.panic": {
+    "Name": "パニック",
+    "Tooltip": "すべての実行とタイマーを中止し、すべてのオーバーレイを隠します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.restore": {
+    "Name": "復元",
+    "Tooltip": "パニックで外したものを再表示します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.snapshot": {
+    "Name": "シーン",
+    "Tooltip": "すべてのオーバーレイの表示状態、スロット、内容を保存または呼び出します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.shift": {
+    "Name": "Shift",
+    "Tooltip": "押している間: ノブは Shift 用のオーバーレイまたはフィールドを使います"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.clock": {
+    "Name": "時計",
+    "Tooltip": "カウントダウン、カウントアップ、時刻、指定時刻までのカウントをテキストフィールドに書き込みます"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.undo": {
+    "Name": "元に戻す",
+    "Tooltip": "最後のスコア変更を元に戻します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.lock": {
+    "Name": "ロック",
+    "Tooltip": "スコアの変更をロック／解除します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.swap": {
+    "Name": "サイドチェンジ",
+    "Tooltip": "フィールドのペアの値を入れ替えます（チーム A と B）"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.cycle": {
+    "Name": "サイクル",
+    "Tooltip": "フィールドを値のリストで順に進めます（ピリオド、ポゼッション）"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.reset": {
+    "Name": "リセット",
+    "Tooltip": "2 秒長押しで選んだフィールドをリセット"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.datasource": {
+    "Name": "データソース",
+    "Tooltip": "リスト、.txt、.csv の行をオーバーレイのフィールドへ: 次、前、選択、Auto Next"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.template": {
+    "Name": "テキストテンプレート",
+    "Tooltip": "複数のフィールドから作ったテキストを書き込みます。例: {Name} – {Role}"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.vote": {
+    "Name": "投票する",
+    "Tooltip": "投票の選択肢に 1 票加えます。合計と割合が追随します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.goal": {
+    "Name": "目標",
+    "Tooltip": "Streamlabs のような目標: 開始、金額の加算、終了。割合が追随します"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.status": {
+    "Name": "ステータス",
+    "Tooltip": "接続状況（Companion の色）と今日の UNO API 呼び出し数。押すとテスト"
+  },
+  "dev.br.consciencia.opendeck.uno-overlays.lockdesk": {
+    "Name": "デスクロック",
+    "Tooltip": "UNO Overlays のすべてのキーとノブをロックします。2 秒長押しで解除"
+  }
+}

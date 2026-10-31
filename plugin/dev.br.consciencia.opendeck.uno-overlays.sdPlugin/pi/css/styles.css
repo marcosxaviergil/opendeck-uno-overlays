@@ -1,0 +1,153 @@
+/* Dark inspector. Contrast (WCAG 2.2): text >= 4.5:1, control borders and focus ring >= 3:1. */
+:root { color-scheme: dark; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body.page { max-width: 520px; margin: 0 auto; }  /* settings page in a browser window */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #d4d4d4;
+  background-color: #2d2d2d;
+  padding: 14px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  color: #e0e0e0;
+}
+
+.hint {
+  font-size: 11px;
+  margin-top: 4px;
+  color: #b0b0b0;
+}
+
+input[type="text"], input[type="password"], textarea,
+input[type="number"], input[type="search"],
+input[type="url"],
+input[type="datetime-local"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #767676;
+  border-radius: 4px;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid #4da3ff;
+  outline-offset: 1px;
+}
+
+::placeholder {
+  color: #909090;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0;
+}
+
+button {
+  min-height: 24px;
+  min-width: 24px;
+  border: 1px solid #767676;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 7px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+button:hover {
+  border-color: #4da3ff;
+}
+
+.slot-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+fieldset {
+  border: 1px solid #3f3f3f;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: #262626;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.field-row {
+  margin-bottom: 12px;
+}
+
+.field-row label {
+  margin-top: 0;
+}
+
+h1 { font-size: 16px; margin-bottom: 12px; }
+#status { font-size: 12px; margin: 10px 0; color: #85ceb2; overflow-wrap: anywhere; }
+#status.error { color: #ffae9f; }
+textarea { min-height: 70px; resize: vertical; }
+button:disabled, input:disabled, select:disabled { opacity: .5; cursor: default; }
+.log { max-height: 260px; overflow: auto; white-space: pre-wrap; font-size: 11px; background: #1e1e1e; padding: 8px; border-radius: 4px; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+.pick { display: flex; gap: 6px; margin-bottom: 4px; }
+.pick input { flex: 1; padding: 4px 8px; }
+.pick button { padding: 2px 8px; }
+.pick button.on .ms { color: #ffd600; }
+
+/* "?" help (js/tips.js): hover or keyboard focus shows it, Esc hides it, the pointer can move onto it (WCAG 1.4.13). */
+.label-row { display: flex; align-items: center; gap: 4px; margin-top: 12px; margin-bottom: 6px; }
+.label-row label { margin: 0; }
+legend .tip, .slot-actions .tip { margin-left: 6px; }
+.tip { position: relative; display: inline-flex; align-items: center; }
+.tip-button { padding: 0; min-width: 24px; min-height: 24px; border-radius: 50%; line-height: 1; display: inline-flex;
+  align-items: center; justify-content: center; }
+.tip-button .ms { margin: 0; font-size: 16px; vertical-align: 0; }
+.tip-text { display: none; position: absolute; left: 0; top: calc(100% + 4px); z-index: 10; width: max-content;
+  max-width: min(300px, 80vw); padding: 8px 10px; border: 1px solid #767676; border-radius: 4px; background: #111;
+  color: #e8e8e8; font-size: 12px; font-weight: normal; line-height: 1.45; white-space: normal; text-align: left; }
+.tip-text::before { content: ""; position: absolute; left: 0; right: 0; top: -6px; height: 6px; }  /* no gap: hoverable */
+.tip:hover .tip-text, .tip:focus-within .tip-text { display: block; }
+.tip.dismissed .tip-text { display: none; }
+.inline-row { display: flex; gap: 6px; align-items: center; }
+.inline-row > input, .inline-row > select { flex: 1; min-width: 0; }
+fieldset.trigger { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+fieldset.trigger > select, fieldset.trigger > input[type="text"] { flex: 1 1 45%; min-width: 0; width: auto; }
+fieldset.trigger > input[type="number"] { width: 110px; }
+h2 { font-size: 14px; margin: 16px 0 4px; }
+code { font-family: ui-monospace, monospace; color: #b0b0b0; }

@@ -1,0 +1,11 @@
+# Build and tool output
+dist/
+__pycache__/
+*.pyc
+.ruff_cache/
+node_modules/
+
+# Personal files that may hold tokens or names (LGPD): never commit
+*.backup.json
+uno-overlays-backup.json
+.env

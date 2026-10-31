@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>UNO Overlays settings</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page">
+  <h1 data-t="UNO Overlays settings">UNO Overlays settings</h1>
+  <p id="status" role="status" aria-live="polite"></p>
+
+  <section class="section" aria-labelledby="language-title">
+    <h2 id="language-title" data-t="Language">Language</h2>
+    <div class="label-row" id="language-row"><label for="language" data-t="Language of keys, inspector and this page">Language of keys, inspector and this page</label></div>
+    <select id="language"></select>
+  </section>
+
+  <form id="obs">
+    <fieldset>
+      <legend id="obs-legend" data-t="OBS Studio (obs-websocket 5), used by every key">OBS Studio (obs-websocket 5), used by every key</legend>
+      <label class="inline"><input id="enabled" type="checkbox"> <span data-t="Connect to OBS">Connect to OBS</span></label>
+      <div class="label-row" id="host-row"><label for="host" data-t="Host">Host</label></div>
+      <input id="host" type="text" autocomplete="off" spellcheck="false" placeholder="127.0.0.1">
+      <div class="label-row" id="port-row"><label for="port" data-t="Port">Port</label></div>
+      <input id="port" type="number" min="1" max="65535" required placeholder="4455">
+      <div class="label-row" id="password-row"><label for="password" data-t="Password">Password</label></div>
+      <input id="password" type="password" autocomplete="off">
+      <label id="clear-row" class="inline hidden"><input id="clear" type="checkbox"> <span data-t="Remove the saved password">Remove the saved password</span></label>
+      <div class="slot-actions"><button type="submit" data-t="Save and connect">Save and connect</button></div>
+      <p class="hint" data-t="In OBS: Tools → WebSocket Server Settings. Enable the server, then copy the port and the password.">In OBS: Tools → WebSocket Server Settings. Enable the server, then copy the port and the password.</p>
+    </fieldset>
+  </form>
+
+  <fieldset>
+    <legend id="live-legend" data-t="Edits while on air">Edits while on air</legend>
+    <div class="label-row" id="live-row"><label for="live" data-t="Wait after the last change (ms, 0 to 10000; 0 = send while typing)">Wait after the last change (ms, 0 to 10000; 0 = send while typing)</label></div>
+    <input id="live" type="number" min="0" max="10000" step="100">
+  </fieldset>
+
+  <fieldset>
+    <legend id="apps-legend" data-t="Control apps">Control apps</legend>
+    <p class="hint" data-t="Keys register a control app when its token connects. Triggers, groups, Status and Panic use this list, also for keys that are not on screen.">Keys register a control app when its token connects. Triggers, groups, Status and Panic use this list, also for keys that are not on screen.</p>
+    <div id="apps"></div>
+    <div class="label-row" id="new-token-row"><label for="new-token" data-t="Add a control app: API token">Add a control app: API token</label></div>
+    <input id="new-token" type="password" autocomplete="off" spellcheck="false">
+    <div class="label-row"><label for="new-name" data-t="Name (optional)">Name (optional)</label></div>
+    <input id="new-name" type="text" autocomplete="off">
+    <div class="slot-actions"><button id="add-app" type="button" data-t="Add control app">Add control app</button></div>
+  </fieldset>
+
+  <fieldset>
+    <legend id="triggers-legend" data-t="Triggers">Triggers</legend>
+    <p class="hint" data-t="They run whatever profile or device is on screen. Each one: when the event happens, show or hide an overlay after the delay.">They run whatever profile or device is on screen. Each one: when the event happens, show or hide an overlay after the delay.</p>
+    <div id="triggers"></div>
+    <div class="slot-actions"><button id="add-trigger" type="button" data-t="Add trigger">Add trigger</button></div>
+  </fieldset>
+
+  <fieldset>
+    <legend id="groups-legend" data-t="Exclusive groups">Exclusive groups</legend>
+    <p class="hint" data-t="Showing an overlay of a group hides the others of the same group. Overlay keys choose their group; time and members are here.">Showing an overlay of a group hides the others of the same group. Overlay keys choose their group; time and members are here.</p>
+    <div id="groups"></div>
+    <div class="label-row" id="new-group-row"><label for="new-group" data-t="New group name">New group name</label></div>
+    <input id="new-group" type="text" autocomplete="off">
+    <div class="slot-actions"><button id="add-group" type="button" data-t="Add group">Add group</button></div>
+  </fieldset>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/lang.js"></script>
+  <script src="js/tips.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

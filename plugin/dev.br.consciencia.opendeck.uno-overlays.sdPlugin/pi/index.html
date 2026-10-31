@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>UNO Overlays</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/symbols.css">
+</head>
+<body>
+  <h1 id="action-name">UNO Overlays</h1>
+  <div id="token-section" class="section">
+    <div class="label-row"><label id="token-label" for="token" data-t="API Token">API Token</label></div>
+    <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="Control API token" data-t-placeholder="Control API token">
+    <div class="slot-actions"><button id="reload" type="button"><span class="ms" aria-hidden="true">&#xe5d5;</span><span data-t="Connect / Reload">Connect / Reload</span></button></div>
+    <p class="hint" data-t="UNO Control App → ? → API Description → token in the API URL.">UNO Control App → ? → API Description → token in the API URL.</p>
+  </div>
+  <p id="status" role="status" aria-live="polite"></p>
+  <main id="controls"></main>
+  <p id="help" class="hint"></p>
+  <script src="js/glyphs.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/lang.js"></script>
+  <script src="js/tips.js"></script>
+  <script src="js/texts.js"></script>
+  <script src="js/bridge.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/form-builder.js"></script>
+  <script src="js/inspector.js"></script>
+  <script src="js/builders.js"></script>
+  <script src="js/overlay.js"></script>
+  <script src="js/obs.js"></script>
+  <script src="js/editors.js"></script>
+  <script src="js/definitions.js"></script>
+  <script src="js/status.js"></script>
+  <script src="js/pickers.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

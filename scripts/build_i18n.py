@@ -1,0 +1,139 @@
+"""Languages: check the catalogs and generate the files the plugin and OpenDeck read.
+
+Catalogs (plugin/…/i18n/<code>.json) are gettext style: the English text is the key. This script finds
+every text the code marks for translation and fails when a catalog misses one or keeps one nobody uses:
+- t('…') in pi/js/*.js and data-t / data-t-placeholder in pi/*.html (inspector and settings page);
+- tr("…") in uno/**/*.py (messages shown on keys, in the inspector and on the settings page);
+- Name and Tooltip of the plugin and of each action in manifest.json (OpenDeck's action list);
+- the "?" keys (help texts) of i18n/en.json, which hold the English of texts that are not English keys.
+It writes pi/js/i18n.js (window.I18N, every catalog) and OpenDeck's own files in the plugin folder:
+<language>.json with "Name" and, per action UUID, "Name" and "Tooltip" (OpenDeck 2.14 get_localisations,
+ActionList.svelte), for the languages OpenDeck offers (SettingsView.svelte) that the plugin has.
+
+    python3 -B scripts/build_i18n.py           # check, then write the generated files
+    python3 -B scripts/build_i18n.py --check   # check, and fail if a generated file is out of date
+"""
+
+import ast
+import html
+import json
+import pathlib
+import re
+import sys
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+PLUGIN = ROOT / "plugin" / "dev.br.consciencia.opendeck.uno-overlays.sdPlugin"
+CATALOGS = PLUGIN / "i18n"
+sys.path.insert(0, str(PLUGIN))
+from uno.i18n import LANGUAGES, OPENDECK  # noqa: E402 - one list of languages for the plugin and this script
+
+JS_CALL = re.compile(r"""\bt\(\s*(?:'((?:\\.|[^'\\])*)'|"((?:\\.|[^"\\])*)"|`((?:\\.|[^`\\$])*)`)""")
+HTML_ATTRIBUTE = re.compile(r'data-t(?:-placeholder)?="([^"]*)"')
+GENERATED = ("glyphs.js", "i18n.js")
+
+
+def unescape_js(text):
+    return re.sub(r"\\(u[0-9a-fA-F]{4}|n|'|\"|\\|`)", lambda m: {"n": "\n"}.get(m[1], m[1][-1]) if m[1][0] != "u" else
+                  chr(int(m[1][1:], 16)), text)  # fmt: skip
+
+
+def texts():
+    """Every text marked for translation, with one place where it is used."""
+    found = {}
+    for path in sorted((PLUGIN / "pi" / "js").glob("*.js")):
+        if path.name in GENERATED:
+            continue
+        for match in JS_CALL.finditer(path.read_text(encoding="utf-8")):
+            found.setdefault(unescape_js(next(g for g in match.groups() if g is not None)), path.name)
+    for path in sorted((PLUGIN / "pi").glob("*.html")):
+        for match in HTML_ATTRIBUTE.finditer(path.read_text(encoding="utf-8")):
+            found.setdefault(html.unescape(match[1]), path.name)
+    for path in sorted((PLUGIN / "uno").rglob("*.py")):
+        for node in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
+            if (
+                isinstance(node, ast.Call)
+                and isinstance(node.func, ast.Name)
+                and node.func.id == "tr"
+                and node.args
+                and isinstance(node.args[0], ast.Constant)
+                and isinstance(node.args[0].value, str)
+            ):
+                found.setdefault(node.args[0].value, path.relative_to(PLUGIN).as_posix())
+    manifest = json.loads((PLUGIN / "manifest.json").read_text(encoding="utf-8"))
+    for action in manifest["Actions"]:
+        found.setdefault(action["Name"], "manifest.json")
+        found.setdefault(action["Tooltip"], "manifest.json")
+    found.setdefault(manifest["Description"], "manifest.json")
+    english = load("en")
+    for key in english:
+        found.setdefault(key, "i18n/en.json")
+    return found, manifest
+
+
+def load(code):
+    path = CATALOGS / f"{code}.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def check(found):
+    problems = []
+    english = load("en")
+    for key, where in found.items():
+        if key.startswith("?") and key not in english:
+            problems.append(f"en: help text {key!r} ({where}) has no English text")
+    stray = [key for key in english if not key.startswith("?")]
+    problems += [f"en: only help texts ('?…') belong in en.json, not {key!r}" for key in stray]
+    for code in LANGUAGES:
+        if code == "en":
+            continue
+        catalog = load(code)
+        missing = [key for key in found if key not in catalog or not str(catalog[key]).strip()]
+        unused = [key for key in catalog if key not in found]
+        problems += [f"{code}: missing {key!r} ({found[key]})" for key in missing]
+        problems += [f"{code}: unused {key!r}" for key in unused]
+        for key, value in catalog.items():  # a translation keeps every {placeholder} of its English text
+            source = english.get(key, key)
+            if key in found and set(re.findall(r"\{(\w+)\}", source)) != set(re.findall(r"\{(\w+)\}", str(value))):
+                problems.append(f"{code}: placeholders differ in {key!r}")
+    return problems
+
+
+def generated(manifest):
+    catalogs = {code: load(code) for code in LANGUAGES}
+    files = {
+        PLUGIN / "pi" / "js" / "i18n.js": "/* Generated by scripts/build_i18n.py from i18n/*.json: do not edit. */\n"
+        "window.I18N = " + json.dumps(catalogs, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + ";\n",
+    }
+    for opendeck, code in OPENDECK.items():
+        if code == "en":  # OpenDeck shows the manifest itself in English
+            continue
+        catalog = catalogs[code]
+        data = {"Name": manifest["Name"], "Description": catalog.get(manifest["Description"], manifest["Description"])}
+        for action in manifest["Actions"]:
+            data[action["UUID"]] = {
+                "Name": catalog.get(action["Name"], action["Name"]),
+                "Tooltip": catalog.get(action["Tooltip"], action["Tooltip"]),
+            }
+        files[PLUGIN / f"{opendeck}.json"] = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+    return files
+
+
+def main():
+    found, manifest = texts()
+    problems = check(found)
+    if problems:
+        more = f"\n  … {len(problems)} in all" if len(problems) > 200 else ""
+        sys.exit("i18n:\n  " + "\n  ".join(problems[:200]) + more)
+    stale = []
+    for path, content in generated(manifest).items():
+        if not path.exists() or path.read_text(encoding="utf-8") != content:
+            stale.append(path.relative_to(ROOT).as_posix())
+            if "--check" not in sys.argv:
+                path.write_text(content, encoding="utf-8")
+    if stale and "--check" in sys.argv:
+        sys.exit(f"i18n: generated files out of date, run scripts/build_i18n.py: {stale}")
+    print(f"i18n: {len(found)} texts, {len(LANGUAGES)} languages" + (f", wrote {len(stale)} files" if stale else ""))
+
+
+if __name__ == "__main__":
+    main()
